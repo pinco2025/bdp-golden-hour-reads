@@ -46,15 +46,19 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
         <div 
-          className="absolute inset-0 gradient-sunrise opacity-90"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(135deg, 
-              hsl(25 85% 75% / 0.9), 
-              hsl(35 75% 85% / 0.8), 
-              hsl(320 40% 90% / 0.7))`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&crop=edges')`,
           }}
         />
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-accent/30 to-background/60" />
+        
+        {/* Secondary overlay for text readability */}
+        <div className="absolute inset-0 bg-black/20" />
         
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 animate-pulse">
@@ -68,23 +72,23 @@ const Index = () => {
         </div>
 
         <div className="relative z-10 text-center max-w-4xl px-6">
-          <div className="mb-8 p-4 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20">
-            <p className="text-lg font-medium text-foreground/80">
+          <div className="mb-8 p-4 bg-white/20 rounded-lg backdrop-blur-md border border-white/30 shadow-warm">
+            <p className="text-lg font-medium text-white drop-shadow-lg">
               📖 Logo will be added here 📖
             </p>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight drop-shadow-lg">
             <span style={{ fontFamily: 'Playfair Display, serif' }}>
               Discover Your Next
             </span>
             <br />
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="text-accent drop-shadow-lg">
               Great Read
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 text-foreground/80 literary-text max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 text-white/90 literary-text max-w-2xl mx-auto drop-shadow-md">
             Welcome to BDP Publications, where every page turns into a moment of discovery. 
             Curated ebooks that inspire, educate, and transport you to new worlds.
           </p>
@@ -100,7 +104,7 @@ const Index = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="organic-curve border-2 border-primary/50 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-lg px-8 py-6"
+              className="organic-curve border-2 border-white/70 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white text-lg px-8 py-6"
             >
               Learn Our Story
             </Button>
@@ -109,15 +113,25 @@ const Index = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-foreground/50 rounded-full mt-2 animate-pulse"></div>
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-20 px-6 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&h=1080&fit=crop&crop=edges')`,
+          }}
+        />
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+        <div className="relative z-10 max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Playfair Display, serif' }}>
@@ -139,10 +153,10 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="organic-curve bg-gradient-to-br from-primary/20 to-accent/20 p-8 backdrop-blur-sm">
+            <div className="relative overflow-hidden">
+              <div className="organic-curve bg-white/80 backdrop-blur-sm p-8 shadow-warm">
                 <img 
-                  src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=500&h=600&fit=crop&crop=edges" 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=edges" 
                   alt="Cozy reading corner with books and warm lighting"
                   className="w-full h-auto rounded-lg shadow-warm"
                 />
@@ -153,8 +167,19 @@ const Index = () => {
       </section>
 
       {/* Featured Books Section */}
-      <section id="featured-books" className="py-20 px-6 bg-gradient-to-br from-secondary/30 to-accent/10">
-        <div className="max-w-7xl mx-auto">
+      <section id="featured-books" className="relative py-20 px-6 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1418065460487-3d7cc9b0c3f2?w=1920&h=1080&fit=crop&crop=edges')`,
+          }}
+        />
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-secondary/60 backdrop-blur-sm" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Playfair Display, serif' }}>
               Featured Collection
@@ -220,9 +245,20 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="gradient-sunset p-12 organic-curve text-white">
+      <section className="relative py-20 px-6 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1475924156734-496f6cac893c?w=1920&h=1080&fit=crop&crop=edges')`,
+          }}
+        />
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/70 to-accent/60" />
+        
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <div className="bg-black/20 backdrop-blur-md p-12 organic-curve text-white border border-white/20 shadow-glow">
             <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
               Join Our Reading Community
             </h2>
@@ -231,10 +267,10 @@ const Index = () => {
               Your next favorite book is just a click away.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="organic-curve text-lg px-8 py-6">
+              <Button size="lg" variant="secondary" className="organic-curve text-lg px-8 py-6 bg-white/90 text-primary hover:bg-white">
                 Follow on Facebook
               </Button>
-              <Button size="lg" variant="outline" className="organic-curve border-white/50 text-white hover:bg-white/20 text-lg px-8 py-6">
+              <Button size="lg" variant="outline" className="organic-curve border-white/70 text-white hover:bg-white/20 text-lg px-8 py-6 backdrop-blur-sm">
                 Visit Our Pinterest
               </Button>
             </div>
@@ -243,8 +279,16 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card/50 backdrop-blur-sm py-12 px-6 border-t border-border/50">
-        <div className="max-w-6xl mx-auto">
+      <footer className="relative bg-card/90 backdrop-blur-md py-12 px-6 border-t border-border/50 overflow-hidden">
+        {/* Subtle background pattern */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1444927714506-8492d94b5ba0?w=1920&h=600&fit=crop&crop=edges')`,
+          }}
+        />
+        
+        <div className="relative z-10 max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="font-bold text-lg mb-4 text-card-foreground" style={{ fontFamily: 'Playfair Display, serif' }}>
