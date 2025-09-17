@@ -334,9 +334,6 @@ const Index = () => {
               <h4 className="font-semibold mb-4 text-card-foreground">Quick Links</h4>
               <ul className="space-y-2">
                 <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Our Story</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">New Releases</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Author Guidelines</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact Us</a></li>
               </ul>
             </div>
             
@@ -365,18 +362,7 @@ const Index = () => {
                   </a>
                 </Button>
               </div>
-              <div className="mt-4">
-                <p className="text-sm text-muted-foreground">
-                  📧 hello@bdppublications.com
-                </p>
-              </div>
             </div>
-          </div>
-          
-          <div className="border-t border-border/50 mt-8 pt-8 text-center">
-            <p className="text-muted-foreground text-sm">
-              © 2024 BDP Publications. All rights reserved. Made with ❤️ for book lovers everywhere.
-            </p>
           </div>
         </div>
       </footer>
