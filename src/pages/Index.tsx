@@ -38,8 +38,14 @@ const Index = () => {
     }
   ];
 
+  // Enhanced smooth scroll with fallback and focus
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      el.tabIndex = -1;
+      el.focus({ preventScroll: true });
+    }
   };
 
   return (
@@ -72,10 +78,13 @@ const Index = () => {
         </div>
 
         <div className="relative z-10 text-center max-w-4xl px-6">
-          <div className="mb-8 p-4 bg-white/20 rounded-lg backdrop-blur-md border border-white/30 shadow-warm">
-            <p className="text-lg font-medium text-white drop-shadow-lg">
-              📖 Logo will be added here 📖
-            </p>
+          <div className="mb-8 flex justify-center">
+            <img
+              src="/logo/bdploog.png"
+              alt="BDP Publications Logo"
+              className="w-28 h-28 rounded-full object-cover border-4 border-white shadow-warm bg-white/80"
+              style={{ aspectRatio: '1/1' }}
+            />
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight drop-shadow-lg">
@@ -112,11 +121,19 @@ const Index = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div>
+        {/* Improved Scroll Indicator Arrow */}
+        <button
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 focus:outline-none group"
+          aria-label="Scroll to featured books"
+          onClick={() => scrollToSection('featured-books')}
+        >
+          <span className="flex flex-col items-center">
+            <svg className="w-8 h-8 text-white drop-shadow-lg animate-bounce group-hover:text-accent transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+            <span className="text-xs text-white/80 mt-1">Scroll</span>
+          </span>
+        </button>
       </section>
 
       {/* About Section */}
@@ -143,14 +160,7 @@ const Index = () => {
                 guides to captivating fiction, we're here to be your trusted companion on life's reading journey.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center p-4 bg-card rounded-lg shadow-warm">
-                  <div className="text-2xl font-bold text-primary">50+</div>
-                  <div className="text-sm text-muted-foreground">Premium Titles</div>
-                </div>
-                <div className="text-center p-4 bg-card rounded-lg shadow-warm">
-                  <div className="text-2xl font-bold text-primary">1000+</div>
-                  <div className="text-sm text-muted-foreground">Happy Readers</div>
-                </div>
+                {/* Removed Premium Titles and Happy Readers section as requested */}
               </div>
             </div>
             <div className="relative overflow-hidden">
@@ -215,19 +225,31 @@ const Index = () => {
                   </div>
                   <div className="flex gap-2">
                     {book.platforms.includes('gumroad') && (
-                      <Button size="sm" className="flex-1 organic-curve">
-                        <ShoppingBag className="w-4 h-4 mr-1" />
-                        Gumroad
+                      <Button size="sm" className="flex-1 organic-curve" asChild>
+                        <a href="https://gumroad.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Gumroad">
+                          <ShoppingBag className="w-4 h-4 mr-1" />
+                          Gumroad
+                        </a>
                       </Button>
                     )}
                     {book.platforms.includes('facebook') && (
-                      <Button size="sm" variant="outline" className="organic-curve border-primary/50">
-                        <Facebook className="w-4 h-4" />
+                      <Button size="sm" variant="outline" className="organic-curve border-primary/50" asChild>
+                        <a href="https://facebook.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                          <Facebook className="w-4 h-4" />
+                        </a>
                       </Button>
                     )}
+                    {/* Always show Instagram button */}
+                    <Button size="sm" variant="outline" className="organic-curve border-primary/50" asChild>
+                      <a href="https://instagram.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-4 h-4"><rect width="20" height="20" x="2" y="2" rx="5" stroke="currentColor" strokeWidth="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+                      </a>
+                    </Button>
                     {book.platforms.includes('pinterest') && (
-                      <Button size="sm" variant="outline" className="organic-curve border-primary/50">
-                        <ExternalLink className="w-4 h-4" />
+                      <Button size="sm" variant="outline" className="organic-curve border-primary/50" asChild>
+                        <a href="https://pinterest.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
                       </Button>
                     )}
                   </div>
@@ -267,11 +289,20 @@ const Index = () => {
               Your next favorite book is just a click away.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="organic-curve text-lg px-8 py-6 bg-white/90 text-primary hover:bg-white">
-                Follow on Facebook
+              <Button size="lg" variant="secondary" className="organic-curve text-lg px-8 py-6 bg-white/90 text-primary hover:bg-white" asChild>
+                <a href="https://facebook.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  Follow on Facebook
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="organic-curve border-white/70 text-white hover:bg-white/20 text-lg px-8 py-6 backdrop-blur-sm">
-                Visit Our Pinterest
+              <Button size="lg" variant="secondary" className="organic-curve text-lg px-8 py-6 bg-white/90 text-primary hover:bg-white" asChild>
+                <a href="https://instagram.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  Follow on Instagram
+                </a>
+              </Button>
+              <Button size="lg" variant="secondary" className="organic-curve text-lg px-8 py-6 bg-white/90 text-primary hover:bg-white" asChild>
+                <a href="https://pinterest.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                  Visit Our Pinterest
+                </a>
               </Button>
             </div>
           </div>
@@ -312,14 +343,26 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4 text-card-foreground">Find Us On</h4>
               <div className="flex gap-4">
-                <Button size="sm" variant="outline" className="organic-curve">
-                  <Facebook className="w-4 h-4" />
+                <Button size="sm" variant="outline" className="organic-curve" asChild>
+                  <a href="https://facebook.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <Facebook className="w-4 h-4" />
+                  </a>
                 </Button>
-                <Button size="sm" variant="outline" className="organic-curve">
-                  <ExternalLink className="w-4 h-4" />
+                <Button size="sm" variant="outline" className="organic-curve" asChild>
+                  <a href="https://instagram.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    {/* Instagram SVG icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-4 h-4"><rect width="20" height="20" x="2" y="2" rx="5" stroke="currentColor" strokeWidth="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+                  </a>
                 </Button>
-                <Button size="sm" variant="outline" className="organic-curve">
-                  <ShoppingBag className="w-4 h-4" />
+                <Button size="sm" variant="outline" className="organic-curve" asChild>
+                  <a href="https://pinterest.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </Button>
+                <Button size="sm" variant="outline" className="organic-curve" asChild>
+                  <a href="https://gumroad.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Gumroad">
+                    <ShoppingBag className="w-4 h-4" />
+                  </a>
                 </Button>
               </div>
               <div className="mt-4">
