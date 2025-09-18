@@ -5,35 +5,39 @@ import { BookOpen, Heart, Star, ExternalLink, Facebook, ShoppingBag } from "luci
 const Index = () => {
   const featuredBooks = [
     {
-      title: "Morning Meditations",
-      author: "Elena Rodriguez",
-      cover: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&h=400&fit=crop&crop=edges",
-      description: "Daily wisdom for peaceful mornings",
-      price: "$12.99",
-      platforms: ["gumroad", "facebook"]
-    },
-    {
-      title: "The Golden Path",
-      author: "Marcus Chen",
-      cover: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=400&fit=crop&crop=edges",
-      description: "A journey through self-discovery",
-      price: "$15.99",
-      platforms: ["gumroad", "pinterest"]
-    },
-    {
-      title: "Sunset Stories",
-      author: "Sarah Williams",
-      cover: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop&crop=edges",
-      description: "Tales of love, loss, and hope",
-      price: "$11.99",
+      title: "The Deep Sleep Protocol",
+      author: "Beyond Digital Paradigms",
+      cover: "https://public-files.gumroad.com/wsjs35fsrzft4qeky5gqgqdny9vp",
+      description: "Evidence-based protocols for optimizing sleep and wellness naturally",
+      price: "$1",
+      gumroadUrl: "https://ishanq.gumroad.com/l/deepsleeprotocol",
       platforms: ["gumroad", "facebook", "pinterest"]
     },
     {
-      title: "Mindful Moments",
-      author: "Dr. James Foster",
-      cover: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=300&h=400&fit=crop&crop=edges",
-      description: "Finding peace in everyday life",
-      price: "$13.99",
+      title: "The 5-Year Horizon",
+      author: "Beyond Digital Paradigms",
+      cover: "https://public-files.gumroad.com/t0iouzm37kmuuhiw37um7bu1wj6r",
+      description: "Your definitive blueprint for a financially secure and purpose-driven retirement",
+      price: "₹149",
+      gumroadUrl: "https://ishanq.gumroad.com/l/fiveyearhorizon",
+      platforms: ["gumroad", "pinterest"]
+    },
+    {
+      title: "The Holistic Wealth Blueprint",
+      author: "Beyond Digital Paradigms",
+      cover: "https://public-files.gumroad.com/uav9wpgqjkjf1nn1261q716kk8fg",
+      description: "A comprehensive guide to building sustainable wealth through holistic principles",
+      price: "₹149",
+      gumroadUrl: "https://ishanq.gumroad.com/l/holisticwealth",
+      platforms: ["gumroad", "facebook", "pinterest"]
+    },
+    {
+      title: "Digital Delusion: The Implosion of Sam Bankman-Fried and the FTX House of Cards",
+      author: "Beyond Digital Paradigms",
+      cover: "https://public-files.gumroad.com/zfttlvpi4sqpeefprf73dliohuqw",
+      description: "An in-depth analysis of the FTX collapse and crypto market dynamics",
+      price: "$149",
+      gumroadUrl: "https://ishanq.gumroad.com/l/digitaldelusion",
       platforms: ["gumroad", "pinterest"]
     }
   ];
@@ -61,20 +65,37 @@ const Index = () => {
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-accent/30 to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-accent/40 to-background/70" />
         
         {/* Secondary overlay for text readability */}
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/40" />
         
-        {/* Floating Elements */}
+        {/* Floating Glass Elements */}
         <div className="absolute top-20 left-10 animate-pulse">
-          <BookOpen className="w-8 h-8 text-primary/30" />
+          <div className="bg-white/10 backdrop-blur-md rounded-full p-4 border border-white/20">
+            <BookOpen className="w-8 h-8 text-primary/60" />
+          </div>
         </div>
         <div className="absolute bottom-32 right-16 animate-pulse delay-700">
-          <Heart className="w-6 h-6 text-accent/40" />
+          <div className="bg-white/10 backdrop-blur-md rounded-full p-3 border border-white/20">
+            <Heart className="w-6 h-6 text-accent/60" />
+          </div>
         </div>
         <div className="absolute top-1/3 right-20 animate-pulse delay-1000">
-          <Star className="w-7 h-7 text-primary/25" />
+          <div className="bg-white/10 backdrop-blur-md rounded-full p-4 border border-white/20">
+            <Star className="w-7 h-7 text-primary/50" />
+          </div>
+        </div>
+        {/* Additional floating elements */}
+        <div className="absolute top-1/4 left-1/4 animate-pulse delay-500">
+          <div className="bg-white/5 backdrop-blur-sm rounded-full p-2 border border-white/10">
+            <div className="w-3 h-3 bg-primary/30 rounded-full"></div>
+          </div>
+        </div>
+        <div className="absolute bottom-1/4 left-1/3 animate-pulse delay-1500">
+          <div className="bg-white/5 backdrop-blur-sm rounded-full p-2 border border-white/10">
+            <div className="w-4 h-4 bg-accent/30 rounded-full"></div>
+          </div>
         </div>
 
         <div className="relative z-10 text-center max-w-4xl px-6">
@@ -87,17 +108,17 @@ const Index = () => {
             />
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight drop-shadow-lg">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight text-shadow">
             <span style={{ fontFamily: 'Playfair Display, serif' }}>
               Discover Your Next
             </span>
             <br />
-            <span className="text-accent drop-shadow-lg">
+            <span className="text-accent text-shadow">
               Great Read
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 text-white/90 literary-text max-w-2xl mx-auto drop-shadow-md">
+          <p className="text-xl md:text-2xl mb-8 text-white/90 literary-text max-w-2xl mx-auto text-shadow">
             Welcome to BDP Publications, where every page turns into a moment of discovery. 
             Curated ebooks that inspire, educate, and transport you to new worlds.
           </p>
@@ -147,27 +168,40 @@ const Index = () => {
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-background/75 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-black/15" />
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Playfair Display, serif' }}>
-                Where Stories Come to Life
+                Beyond Digital Paradigms
               </h2>
-              <p className="text-lg literary-text text-muted-foreground mb-6">
-                At BDP Publications, we believe in the transformative power of words. Each ebook in our collection 
-                is carefully selected for its ability to inspire, educate, and entertain. From personal development 
-                guides to captivating fiction, we're here to be your trusted companion on life's reading journey.
+              <p className="text-xl font-medium literary-text text-foreground mb-6">
+                We are pioneers at the intersection of holistic wellness, financial wisdom, and digital awareness. 
+                Our mission transcends traditional publishing—we craft evidence-based protocols and paradigm-shifting 
+                insights that empower individuals to reclaim their health, wealth, and digital autonomy.
               </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                {/* Removed Premium Titles and Happy Readers section as requested */}
+              <p className="text-xl font-medium literary-text text-foreground mb-6">
+                From optimizing sleep naturally to building sustainable wealth, from understanding crypto market dynamics 
+                to planning secure retirements—each publication represents years of research distilled into actionable wisdom. 
+                We don't just publish books; we architect blueprints for transformed lives.
+              </p>
+              <div className="grid grid-cols-2 gap-6 mb-6">
+                <div className="bg-white/20 backdrop-blur-md rounded-2xl p-4 border border-white/30">
+                  <h4 className="font-bold text-primary mb-2">Evidence-Based</h4>
+                  <p className="text-sm text-muted-foreground">Every protocol backed by research and real-world testing</p>
+                </div>
+                <div className="bg-white/20 backdrop-blur-md rounded-2xl p-4 border border-white/30">
+                  <h4 className="font-bold text-primary mb-2">Paradigm Shifting</h4>
+                  <p className="text-sm text-muted-foreground">Challenging conventional wisdom with innovative approaches</p>
+                </div>
               </div>
             </div>
             <div className="relative overflow-hidden">
-              <div className="organic-curve bg-white/80 backdrop-blur-sm p-8 shadow-warm">
+              <div className="organic-curve bg-white/30 backdrop-blur-lg p-8 shadow-warm border border-white/40">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=edges" 
-                  alt="Cozy reading corner with books and warm lighting"
+                  src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=500&h=600&fit=crop&crop=edges" 
+                  alt="Modern workspace with books, technology and warm lighting representing the intersection of digital and traditional knowledge"
                   className="w-full h-auto rounded-lg shadow-warm"
                 />
               </div>
@@ -187,54 +221,61 @@ const Index = () => {
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-secondary/60 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-secondary/50 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-black/20" />
         
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Playfair Display, serif' }}>
-              Featured Collection
-            </h2>
-            <p className="text-xl text-muted-foreground literary-text max-w-2xl mx-auto">
-              Handpicked titles that have touched hearts and changed minds. Each book is a doorway to new perspectives.
-            </p>
+            <div className="glassmorphism-strong rounded-3xl p-8 max-w-3xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Playfair Display, serif' }}>
+                Featured Collection
+              </h2>
+              <p className="text-xl text-muted-foreground literary-text max-w-2xl mx-auto">
+                Handpicked titles that have touched hearts and changed minds. Each book is a doorway to new perspectives.
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredBooks.map((book, index) => (
-              <Card key={index} className="organic-curve overflow-hidden book-hover border-0 shadow-warm bg-card/80 backdrop-blur-sm">
-                <div className="aspect-[3/4] overflow-hidden">
-                  <img 
-                    src={book.cover} 
-                    alt={`${book.title} book cover`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-bold text-lg mb-2 text-card-foreground" style={{ fontFamily: 'Playfair Display, serif' }}>
-                    {book.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-2">by {book.author}</p>
-                  <p className="text-sm literary-text text-muted-foreground mb-4">{book.description}</p>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-lg font-bold text-primary">{book.price}</span>
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                      ))}
+              <Card key={index} className="organic-curve overflow-hidden book-hover border border-white/20 shadow-warm bg-white/10 backdrop-blur-lg group cursor-pointer">
+                <a href={book.gumroadUrl} target="_blank" rel="noopener noreferrer" className="block">
+                  <div className="aspect-[3/4] overflow-hidden">
+                    <img 
+                      src={book.cover} 
+                      alt={`${book.title} book cover`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2 text-card-foreground group-hover:text-primary transition-colors" style={{ fontFamily: 'Playfair Display, serif' }}>
+                      {book.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-2">by {book.author}</p>
+                    <p className="text-sm literary-text text-muted-foreground mb-4">{book.description}</p>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-lg font-bold text-primary">{book.price}</span>
+                      <div className="flex gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                        ))}
+                      </div>
                     </div>
                   </div>
+                </a>
+                <div className="px-6 pb-6">
                   <div className="flex gap-2">
                     {book.platforms.includes('gumroad') && (
                       <Button size="sm" className="flex-1 organic-curve" asChild>
-                        <a href="https://gumroad.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Gumroad">
+                        <a href={book.gumroadUrl} target="_blank" rel="noopener noreferrer" aria-label="Buy on Gumroad">
                           <ShoppingBag className="w-4 h-4 mr-1" />
-                          Gumroad
+                          Buy Now
                         </a>
                       </Button>
                     )}
                     {book.platforms.includes('facebook') && (
                       <Button size="sm" variant="outline" className="organic-curve border-primary/50" asChild>
-                        <a href="https://facebook.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <a href="https://www.facebook.com/profile.php?id=61570296240601" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                           <Facebook className="w-4 h-4" />
                         </a>
                       </Button>
@@ -247,8 +288,8 @@ const Index = () => {
                     </Button>
                     {book.platforms.includes('pinterest') && (
                       <Button size="sm" variant="outline" className="organic-curve border-primary/50" asChild>
-                        <a href="https://pinterest.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                          <ExternalLink className="w-4 h-4" />
+                        <a href="https://in.pinterest.com/ishansrivastavaintraq/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-4 h-4"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.853 0 1.264.641 1.264 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.807 1.481 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.744 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.334.135-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
                         </a>
                       </Button>
                     )}
@@ -259,9 +300,13 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="organic-curve border-2 border-primary/50 hover:bg-primary/10">
-              View Full Catalog
-            </Button>
+            <div className="glassmorphism rounded-2xl p-6 inline-block">
+              <Button size="lg" variant="default" className="organic-curve bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 glow shadow-warm" asChild>
+                <a href="https://ishanq.gumroad.com/" target="_blank" rel="noopener noreferrer">
+                  View Full Catalog
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -277,10 +322,11 @@ const Index = () => {
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/70 to-accent/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 to-accent/50" />
+        <div className="absolute inset-0 bg-black/30" />
         
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="bg-black/20 backdrop-blur-md p-12 organic-curve text-white border border-white/20 shadow-glow">
+          <div className="bg-white/10 backdrop-blur-xl p-12 organic-curve text-white border border-white/30 shadow-glow">
             <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
               Join Our Reading Community
             </h2>
@@ -290,7 +336,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="organic-curve text-lg px-8 py-6 bg-white/90 text-primary hover:bg-white" asChild>
-                <a href="https://facebook.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=61570296240601" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   Follow on Facebook
                 </a>
               </Button>
@@ -300,7 +346,7 @@ const Index = () => {
                 </a>
               </Button>
               <Button size="lg" variant="secondary" className="organic-curve text-lg px-8 py-6 bg-white/90 text-primary hover:bg-white" asChild>
-                <a href="https://pinterest.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                <a href="https://in.pinterest.com/ishansrivastavaintraq/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
                   Visit Our Pinterest
                 </a>
               </Button>
@@ -310,7 +356,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="relative bg-card/90 backdrop-blur-md py-12 px-6 border-t border-border/50 overflow-hidden">
+      <footer className="relative bg-card/80 backdrop-blur-lg py-12 px-6 border-t border-white/20 overflow-hidden">
         {/* Subtle background pattern */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
@@ -341,7 +387,7 @@ const Index = () => {
               <h4 className="font-semibold mb-4 text-card-foreground">Find Us On</h4>
               <div className="flex gap-4">
                 <Button size="sm" variant="outline" className="organic-curve" asChild>
-                  <a href="https://facebook.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <a href="https://www.facebook.com/profile.php?id=61570296240601" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <Facebook className="w-4 h-4" />
                   </a>
                 </Button>
@@ -352,12 +398,12 @@ const Index = () => {
                   </a>
                 </Button>
                 <Button size="sm" variant="outline" className="organic-curve" asChild>
-                  <a href="https://pinterest.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                    <ExternalLink className="w-4 h-4" />
+                  <a href="https://in.pinterest.com/ishansrivastavaintraq/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-4 h-4"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.853 0 1.264.641 1.264 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.807 1.481 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.744 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.334.135-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
                   </a>
                 </Button>
                 <Button size="sm" variant="outline" className="organic-curve" asChild>
-                  <a href="https://gumroad.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Gumroad">
+                  <a href="https://ishanq.gumroad.com/" target="_blank" rel="noopener noreferrer" aria-label="Gumroad">
                     <ShoppingBag className="w-4 h-4" />
                   </a>
                 </Button>
