@@ -85,11 +85,18 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-lg border-b border-white/20 shadow-warm"
-            : "bg-transparent"
-        }`}
+            ? "bg-black/40 backdrop-blur-xl border-b border-white/10 shadow-2xl"
+            : "bg-black/20 backdrop-blur-md border-b border-white/5"
+        } organic-curve-subtle`}
+        style={{
+          backdropFilter: 'blur(20px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+          background: isScrolled 
+            ? 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%)' 
+            : 'linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.5) 100%)'
+        }}
       >
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -107,14 +114,15 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
                 />
                 {/* Logo backdrop for better visibility */}
                 <div className={`absolute inset-0 rounded-full transition-all duration-300 ${
-                  isScrolled ? "bg-white/10" : "bg-black/20"
-                } -z-10`} />
+                  isScrolled ? "bg-white/20 shadow-lg" : "bg-white/10 shadow-md"
+                } -z-10 backdrop-blur-sm`} />
               </div>
               <span 
-                className={`text-xl font-bold hidden sm:block transition-colors duration-300 ${
-                  isScrolled ? "text-foreground" : "text-white drop-shadow-lg"
-                }`} 
-                style={{ fontFamily: 'Playfair Display, serif' }}
+                className={`text-xl font-bold hidden sm:block transition-colors duration-300 text-white drop-shadow-lg`} 
+                style={{ 
+                  fontFamily: 'Playfair Display, serif',
+                  textShadow: '0 2px 4px rgba(0,0,0,0.5)'
+                }}
               >
                 BDP Publications
               </span>
@@ -126,13 +134,12 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`font-medium transition-colors hover:text-primary ${
+                  className={`font-medium transition-all duration-300 hover:text-primary text-white drop-shadow-lg ${
                     activeSection === item.id
-                      ? "text-primary border-b-2 border-primary"
-                      : isScrolled
-                      ? "text-foreground"
-                      : "text-white"
+                      ? "text-primary border-b-2 border-primary shadow-lg"
+                      : "hover:scale-105"
                   }`}
+                  style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
                 >
                   {item.label}
                 </button>
@@ -148,11 +155,11 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
                     key={social.name}
                     size="sm"
                     variant="outline"
-                    className={`navbar-social-icon organic-curve hover:scale-110 transition-all duration-300 ${
-                      isScrolled
-                        ? "border-primary/40 hover:border-primary bg-white/80 text-primary hover:bg-primary hover:text-white shadow-md"
-                        : "border-primary/60 bg-primary/10 backdrop-blur-sm text-primary hover:bg-primary hover:text-white hover:border-primary shadow-lg"
-                    }`}
+                    className="navbar-social-icon organic-curve hover:scale-110 transition-all duration-300 border-white/20 bg-white/10 backdrop-blur-md text-white hover:bg-primary hover:text-white hover:border-primary/50 shadow-lg hover:shadow-xl"
+                    style={{
+                      backdropFilter: 'blur(10px)',
+                      WebkitBackdropFilter: 'blur(10px)'
+                    }}
                     asChild
                   >
                     <a
@@ -173,11 +180,11 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
             <Button
               variant="outline"
               size="sm"
-              className={`md:hidden organic-curve transition-all duration-300 ${
-                isScrolled
-                  ? "border-primary/40 bg-white/80 text-primary hover:bg-primary hover:text-white"
-                  : "border-primary/60 bg-primary/10 backdrop-blur-sm text-primary hover:bg-primary hover:text-white"
-              }`}
+              className="md:hidden organic-curve transition-all duration-300 border-white/20 bg-white/10 backdrop-blur-md text-white hover:bg-primary hover:text-white hover:border-primary/50 shadow-lg hover:shadow-xl"
+              style={{
+                backdropFilter: 'blur(10px)',
+                WebkitBackdropFilter: 'blur(10px)'
+              }}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -189,20 +196,28 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 md:hidden">
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
           <div className="absolute top-20 left-0 right-0 mx-4">
-            <div className="bg-white/95 backdrop-blur-lg rounded-2xl border border-white/20 shadow-warm p-6">
+            <div 
+              className="bg-black/80 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl p-6"
+              style={{
+                backdropFilter: 'blur(20px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                background: 'linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.9) 100%)'
+              }}
+            >
               {/* Mobile Navigation */}
               <div className="space-y-4 mb-6">
                 {navigationItems.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => handleNavClick(item.id)}
-                    className={`block w-full text-left font-medium py-2 px-4 rounded-lg transition-colors ${
+                    className={`block w-full text-left font-medium py-2 px-4 rounded-lg transition-all duration-300 ${
                       activeSection === item.id
-                        ? "text-primary bg-primary/10"
-                        : "text-foreground hover:text-primary hover:bg-primary/5"
+                        ? "text-primary bg-primary/20 border border-primary/30 shadow-lg"
+                        : "text-white hover:text-primary hover:bg-white/10 hover:scale-105"
                     }`}
+                    style={{ textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}
                   >
                     {item.label}
                   </button>
@@ -210,8 +225,8 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
               </div>
 
               {/* Mobile Social Links */}
-              <div className="border-t border-gray-200 pt-4">
-                <p className="text-sm text-muted-foreground mb-3">Follow us:</p>
+              <div className="border-t border-white/20 pt-4">
+                <p className="text-sm text-white/80 mb-3" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}>Follow us:</p>
                 <div className="flex space-x-3">
                   {socialLinks.map((social) => {
                     const IconComponent = social.icon;
@@ -220,7 +235,7 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
                         key={social.name}
                         size="sm"
                         variant="outline"
-                        className="organic-curve hover:scale-110 transition-all duration-300 border-primary/40 bg-primary/5 text-primary hover:bg-primary hover:text-white hover:border-primary shadow-sm"
+                        className="organic-curve hover:scale-110 transition-all duration-300 border-white/20 bg-white/10 text-white hover:bg-primary hover:text-white hover:border-primary/50 shadow-lg hover:shadow-xl backdrop-blur-sm"
                         asChild
                       >
                         <a

@@ -68,37 +68,37 @@ const Index = () => {
           }}
         />
         
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-accent/40 to-background/70" />
+        {/* Compass-themed overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/45 via-accent/35 to-background/75" />
         
-        {/* Secondary overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        {/* Maritime overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/30 to-transparent" />
         
-        {/* Floating Glass Elements */}
+        {/* Floating Compass Elements */}
         <div className="absolute top-20 left-10 animate-pulse">
-          <div className="bg-white/10 backdrop-blur-md rounded-full p-4 border border-white/20">
-            <BookOpen className="w-8 h-8 text-primary/60" />
+          <div className="bg-primary/15 backdrop-blur-md rounded-full p-4 border border-primary/30 shadow-lg">
+            <BookOpen className="w-8 h-8 text-primary/80" />
           </div>
         </div>
         <div className="absolute bottom-32 right-16 animate-pulse delay-700">
-          <div className="bg-white/10 backdrop-blur-md rounded-full p-3 border border-white/20">
-            <Heart className="w-6 h-6 text-accent/60" />
+          <div className="bg-accent/15 backdrop-blur-md rounded-full p-3 border border-accent/30 shadow-lg">
+            <Heart className="w-6 h-6 text-accent/80" />
           </div>
         </div>
         <div className="absolute top-1/3 right-20 animate-pulse delay-1000">
-          <div className="bg-white/10 backdrop-blur-md rounded-full p-4 border border-white/20">
-            <Star className="w-7 h-7 text-primary/50" />
+          <div className="bg-primary/12 backdrop-blur-md rounded-full p-4 border border-primary/25 shadow-lg">
+            <Star className="w-7 h-7 text-primary/70" />
           </div>
         </div>
-        {/* Additional floating elements */}
+        {/* Additional maritime floating elements */}
         <div className="absolute top-1/4 left-1/4 animate-pulse delay-500">
-          <div className="bg-white/5 backdrop-blur-sm rounded-full p-2 border border-white/10">
-            <div className="w-3 h-3 bg-primary/30 rounded-full"></div>
+          <div className="bg-primary/8 backdrop-blur-sm rounded-full p-2 border border-primary/20">
+            <div className="w-3 h-3 bg-primary/50 rounded-full shadow-glow"></div>
           </div>
         </div>
         <div className="absolute bottom-1/4 left-1/3 animate-pulse delay-1500">
-          <div className="bg-white/5 backdrop-blur-sm rounded-full p-2 border border-white/10">
-            <div className="w-4 h-4 bg-accent/30 rounded-full"></div>
+          <div className="bg-accent/8 backdrop-blur-sm rounded-full p-2 border border-accent/20">
+            <div className="w-4 h-4 bg-accent/50 rounded-full shadow-glow"></div>
           </div>
         </div>
 
@@ -116,8 +116,8 @@ const Index = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight text-shadow">
-            <span style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h1 className="text-5xl md:text-7xl text-minimal-bold mb-6 text-white leading-tight text-shadow">
+            <span>
               Discover Your Next
             </span>
             <br />
@@ -126,7 +126,7 @@ const Index = () => {
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 text-white/90 literary-text max-w-2xl mx-auto text-shadow">
+          <p className="text-xl md:text-2xl mb-8 text-white/90 text-clean max-w-2xl mx-auto text-shadow">
             Welcome to BDP Publications, where every page turns into a moment of discovery. 
             Curated ebooks that inspire, educate, and transport you to new worlds.
           </p>
@@ -171,37 +171,55 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&h=1080&fit=crop&crop=edges')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1418065460487-3d7cc9b0c3f2?w=1920&h=1080&fit=crop&crop=edges')`,
           }}
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-background/75 backdrop-blur-sm" />
-        <div className="absolute inset-0 bg-black/15" />
+        <div className="absolute inset-0 bg-secondary/50 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-black/20" />
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h2 className="text-4xl md:text-5xl text-compass-heading text-black mb-8 typewriter">
                 Beyond Digital Paradigms
               </h2>
-              <p className="text-xl font-medium literary-text text-foreground mb-6">
-                We are pioneers at the intersection of holistic wellness, financial wisdom, and digital awareness. 
-                Our mission transcends traditional publishing—we craft evidence-based protocols and paradigm-shifting 
-                insights that empower individuals to reclaim their health, wealth, and digital autonomy.
-              </p>
-              <p className="text-xl font-medium literary-text text-foreground mb-6">
-                From optimizing sleep naturally to building sustainable wealth, from understanding crypto market dynamics 
-                to planning secure retirements—each publication represents years of research distilled into actionable wisdom. 
-                We don't just publish books; we architect blueprints for transformed lives.
-              </p>
-              <div className="grid grid-cols-2 gap-6 mb-6">
-                <div className="bg-white/20 backdrop-blur-md rounded-2xl p-4 border border-white/30">
-                  <h4 className="font-bold text-primary mb-2">Evidence-Based</h4>
-                  <p className="text-sm text-muted-foreground">Every protocol backed by research and real-world testing</p>
+              <div className="space-y-8">
+                <p className="text-xl text-maritime text-black fade-in leading-relaxed">
+                  We are <strong className="text-primary font-bold">pioneers</strong> at the intersection of holistic wellness, 
+                  financial wisdom, and digital awareness. Our mission transcends traditional publishing—we craft 
+                  <em className="text-accent font-semibold"> evidence-based protocols</em> and paradigm-shifting 
+                  insights that empower individuals to reclaim their health, wealth, and digital autonomy.
+                </p>
+                <p className="text-lg text-maritime text-black fade-in-delayed leading-relaxed">
+                  From <span className="font-semibold text-primary">optimizing sleep naturally</span> to building 
+                  <span className="font-semibold text-accent">sustainable wealth</span>, from understanding 
+                  <span className="font-medium text-primary">crypto market dynamics</span> to planning 
+                  <span className="font-medium text-accent">secure retirements</span>—each publication represents 
+                  years of research distilled into actionable wisdom.
+                </p>
+                <div className="fade-in-more-delayed">
+                  <p className="text-lg font-semibold text-black italic">
+                    "We don't just publish books; we architect blueprints for transformed lives."
+                  </p>
                 </div>
-                <div className="bg-white/20 backdrop-blur-md rounded-2xl p-4 border border-white/30">
-                  <h4 className="font-bold text-primary mb-2">Paradigm Shifting</h4>
-                  <p className="text-sm text-muted-foreground">Challenging conventional wisdom with innovative approaches</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 fade-in-more-delayed">
+                <div className="glassmorphism rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 group">
+                  <h4 className="text-xl text-minimal-bold text-primary mb-3 group-hover:text-accent transition-colors">
+                    📊 Evidence-Based
+                  </h4>
+                  <p className="text-sm text-clean text-muted-foreground leading-relaxed">
+                    Every protocol backed by rigorous research, peer-reviewed studies, and real-world testing across diverse populations.
+                  </p>
+                </div>
+                <div className="glassmorphism rounded-2xl p-6 border border-accent/20 hover:border-accent/40 transition-all duration-300 group">
+                  <h4 className="text-xl text-minimal-bold text-accent mb-3 group-hover:text-primary transition-colors">
+                    🧭 Paradigm Shifting
+                  </h4>
+                  <p className="text-sm text-clean text-muted-foreground leading-relaxed">
+                    Challenging conventional wisdom with innovative, holistic approaches that transform how you think about health and wealth.
+                  </p>
                 </div>
               </div>
             </div>
@@ -217,6 +235,14 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Section Separator */}
+      <div className="relative py-8 bg-gradient-to-r from-transparent via-primary/20 to-transparent">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="border-t-2 border-primary/30 mb-2"></div>
+          <div className="border-t-2 border-accent/30"></div>
+        </div>
+      </div>
 
       {/* Featured Books Section */}
       <section id="featured-books" className="relative py-20 px-6 overflow-hidden">
@@ -235,10 +261,10 @@ const Index = () => {
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="glassmorphism-strong rounded-3xl p-8 max-w-3xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h2 className="text-4xl md:text-5xl text-compass-heading mb-6 text-foreground">
                 Featured Collection
               </h2>
-              <p className="text-xl text-muted-foreground literary-text max-w-2xl mx-auto">
+              <p className="text-xl text-muted-foreground text-clean max-w-2xl mx-auto">
                 Handpicked titles that have touched hearts and changed minds. Each book is a doorway to new perspectives.
               </p>
             </div>
@@ -256,11 +282,11 @@ const Index = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="font-bold text-lg mb-2 text-card-foreground group-hover:text-primary transition-colors" style={{ fontFamily: 'Playfair Display, serif' }}>
+                    <h3 className="text-minimal-bold text-lg mb-2 text-card-foreground group-hover:text-primary transition-colors">
                       {book.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-2">by {book.author}</p>
-                    <p className="text-sm literary-text text-muted-foreground mb-4">{book.description}</p>
+                    <p className="text-sm text-muted-foreground mb-2 text-minimal">by {book.author}</p>
+                    <p className="text-sm text-clean text-muted-foreground mb-4">{book.description}</p>
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-lg font-bold text-primary">{book.price}</span>
                       <div className="flex gap-1">
@@ -329,16 +355,16 @@ const Index = () => {
           }}
         />
         
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 to-accent/50" />
-        <div className="absolute inset-0 bg-black/30" />
+        {/* Darker compass-themed overlay for better readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/35 via-accent/25 to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-black/20" />
         
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="bg-white/10 backdrop-blur-xl p-12 organic-curve text-white border border-white/30 shadow-glow">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <div className="bg-black/20 backdrop-blur-xl p-12 organic-curve text-white border border-white/20 shadow-glow">
+            <h2 className="text-4xl md:text-5xl text-compass-heading mb-6">
               Join Our Reading Community
             </h2>
-            <p className="text-xl literary-text mb-8 opacity-90">
+            <p className="text-xl text-clean mb-8 opacity-90">
               Be the first to discover new releases, exclusive content, and special offers. 
               Your next favorite book is just a click away.
             </p>
@@ -376,10 +402,10 @@ const Index = () => {
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="font-bold text-lg mb-4 text-card-foreground" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h3 className="text-minimal-bold text-lg mb-4 text-card-foreground">
                 BDP Publications
               </h3>
-              <p className="text-muted-foreground literary-text">
+              <p className="text-muted-foreground text-clean">
                 Crafting stories that matter, one page at a time. Your journey into literature begins here.
               </p>
             </div>
@@ -392,8 +418,8 @@ const Index = () => {
             </div>
             
             <div>
-              <h4 className="font-semibold mb-6 text-card-foreground text-xl" style={{ fontFamily: 'Playfair Display, serif' }}>Connect With Us</h4>
-              <p className="text-muted-foreground literary-text mb-6 text-sm">
+              <h4 className="text-minimal-bold mb-6 text-card-foreground text-xl">Connect With Us</h4>
+              <p className="text-muted-foreground text-clean mb-6 text-sm">
                 Join our community and stay updated with the latest releases, exclusive content, and special offers.
               </p>
               
