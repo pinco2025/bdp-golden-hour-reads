@@ -95,14 +95,14 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="relative">
+              <div className="relative logo-glow">
                 <img
-                  src="/logo/bdploog.png"
+                  src="/logo/bdpnewlogo.png"
                   alt="BDP Publications"
-                  className={`w-12 h-12 rounded-full object-cover transition-all duration-300 ${
+                  className={`compass-logo w-12 h-12 object-contain transition-all duration-300 ${
                     isScrolled
-                      ? "border-2 border-primary/30 shadow-md"
-                      : "border-2 border-white/50 shadow-lg"
+                      ? "drop-shadow-md"
+                      : "drop-shadow-lg filter brightness-110"
                   }`}
                 />
                 {/* Logo backdrop for better visibility */}

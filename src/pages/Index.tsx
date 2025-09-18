@@ -104,12 +104,16 @@ const Index = () => {
 
         <div className="relative z-10 text-center max-w-4xl px-6">
           <div className="mb-8 flex justify-center">
-            <img
-              src="/logo/bdploog.png"
-              alt="BDP Publications Logo"
-              className="w-28 h-28 rounded-full object-cover border-4 border-white shadow-warm bg-white/80"
-              style={{ aspectRatio: '1/1' }}
-            />
+            <div className="relative logo-glow">
+              <img
+                src="/logo/bdpnewlogo.png"
+                alt="BDP Publications Logo"
+                className="compass-logo w-36 h-36 object-contain drop-shadow-2xl filter brightness-110 hover:cursor-pointer"
+                style={{ aspectRatio: '1/1' }}
+              />
+              {/* Enhanced backdrop for better visibility */}
+              <div className="absolute inset-0 bg-gradient-radial from-white/20 via-primary/5 to-transparent rounded-full blur-2xl -z-10"></div>
+            </div>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight text-shadow">
