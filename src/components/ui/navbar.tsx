@@ -46,7 +46,7 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
     },
     {
       name: "Gumroad",
-      href: "https://ishanq.gumroad.com/",
+      href: "https://bdppublications.gumroad.com/",
       icon: ShoppingBag,
     },
   ];

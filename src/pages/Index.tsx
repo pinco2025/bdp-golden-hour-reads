@@ -11,7 +11,7 @@ const Index = () => {
       cover: "https://public-files.gumroad.com/wsjs35fsrzft4qeky5gqgqdny9vp",
       description: "Evidence-based protocols for optimizing sleep and wellness naturally",
       price: "$1",
-      gumroadUrl: "https://ishanq.gumroad.com/l/deepsleeprotocol",
+      gumroadUrl: "https://bdppublications.gumroad.com/l/deepsleeprotocol",
       platforms: ["gumroad", "facebook", "pinterest"]
     },
     {
@@ -20,7 +20,7 @@ const Index = () => {
       cover: "https://public-files.gumroad.com/t0iouzm37kmuuhiw37um7bu1wj6r",
       description: "Your definitive blueprint for a financially secure and purpose-driven retirement",
       price: "₹149",
-      gumroadUrl: "https://ishanq.gumroad.com/l/fiveyearhorizon",
+      gumroadUrl: "https://bdppublications.gumroad.com/l/fiveyearhorizon",
       platforms: ["gumroad", "pinterest"]
     },
     {
@@ -29,7 +29,7 @@ const Index = () => {
       cover: "https://public-files.gumroad.com/uav9wpgqjkjf1nn1261q716kk8fg",
       description: "A comprehensive guide to building sustainable wealth through holistic principles",
       price: "₹149",
-      gumroadUrl: "https://ishanq.gumroad.com/l/holisticwealth",
+      gumroadUrl: "https://bdppublications.gumroad.com/l/holisticwealth",
       platforms: ["gumroad", "facebook", "pinterest"]
     },
     {
@@ -38,7 +38,7 @@ const Index = () => {
       cover: "https://public-files.gumroad.com/zfttlvpi4sqpeefprf73dliohuqw",
       description: "An in-depth analysis of the FTX collapse and crypto market dynamics",
       price: "$149",
-      gumroadUrl: "https://ishanq.gumroad.com/l/digitaldelusion",
+      gumroadUrl: "https://bdppublications.gumroad.com/l/digitaldelusion",
       platforms: ["gumroad", "pinterest"]
     }
   ];
@@ -337,7 +337,7 @@ const Index = () => {
           <div className="text-center mt-8 sm:mt-12">
             <div className="glassmorphism rounded-2xl p-4 sm:p-6 inline-block">
               <Button size="lg" variant="default" className="organic-curve bg-primary hover:bg-primary/90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 glow shadow-warm text-sm sm:text-base" asChild>
-                <a href="https://ishanq.gumroad.com/" target="_blank" rel="noopener noreferrer">
+                <a href="https://bdppublications.gumroad.com/" target="_blank" rel="noopener noreferrer">
                   View Full Catalog
                 </a>
               </Button>
@@ -493,7 +493,7 @@ const Index = () => {
                   asChild
                 >
                   <a 
-                    href="https://ishanq.gumroad.com/" 
+                    href="https://bdppublications.gumroad.com/"
                     target="_blank" 
                     rel="noopener noreferrer" 
                     aria-label="Gumroad Store" 
