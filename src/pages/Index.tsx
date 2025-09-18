@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Navbar from "@/components/ui/navbar";
 import { BookOpen, Heart, Star, ExternalLink, Facebook, ShoppingBag } from "lucide-react";
 
 const Index = () => {
@@ -54,8 +55,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      {/* Dynamic Navbar */}
+      <Navbar onNavigate={scrollToSection} />
+      
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -158,7 +162,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="relative py-20 px-6 overflow-hidden">
+      <section id="about" className="relative py-20 px-6 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -288,7 +292,7 @@ const Index = () => {
                     </Button>
                     {book.platforms.includes('pinterest') && (
                       <Button size="sm" variant="outline" className="organic-curve border-primary/50" asChild>
-                        <a href="https://in.pinterest.com/ishansrivastavaintraq/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                        <a href="https://in.pinterest.com/bdppublications/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-4 h-4"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.853 0 1.264.641 1.264 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.807 1.481 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.744 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.334.135-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
                         </a>
                       </Button>
@@ -312,7 +316,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 px-6 overflow-hidden">
+      <section id="community" className="relative py-20 px-6 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -346,7 +350,7 @@ const Index = () => {
                 </a>
               </Button>
               <Button size="lg" variant="secondary" className="organic-curve text-lg px-8 py-6 bg-white/90 text-primary hover:bg-white" asChild>
-                <a href="https://in.pinterest.com/ishansrivastavaintraq/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                <a href="https://in.pinterest.com/bdppublications/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
                   Visit Our Pinterest
                 </a>
               </Button>
@@ -384,29 +388,115 @@ const Index = () => {
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4 text-card-foreground">Find Us On</h4>
-              <div className="flex gap-4">
-                <Button size="sm" variant="outline" className="organic-curve" asChild>
-                  <a href="https://www.facebook.com/profile.php?id=61570296240601" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <Facebook className="w-4 h-4" />
+              <h4 className="font-semibold mb-6 text-card-foreground text-xl" style={{ fontFamily: 'Playfair Display, serif' }}>Connect With Us</h4>
+              <p className="text-muted-foreground literary-text mb-6 text-sm">
+                Join our community and stay updated with the latest releases, exclusive content, and special offers.
+              </p>
+              
+              {/* Social Media Grid - Fixed alignment */}
+              <div className="grid grid-cols-2 gap-3 max-w-md mx-auto md:mx-0">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="footer-social-button organic-curve transition-all duration-300 shadow-warm hover:shadow-glow border-2 border-primary/30 hover:border-primary hover:bg-primary/10 text-card-foreground hover:text-primary group h-20 w-full" 
+                  asChild
+                >
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61570296240601" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label="Facebook" 
+                    className="flex flex-col items-center justify-center gap-1.5 h-full"
+                  >
+                    <Facebook className="w-7 h-7 group-hover:scale-110 transition-transform" />
+                    <span className="text-xs font-semibold leading-none">Facebook</span>
                   </a>
                 </Button>
-                <Button size="sm" variant="outline" className="organic-curve" asChild>
-                  <a href="https://instagram.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    {/* Instagram SVG icon */}
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-4 h-4"><rect width="20" height="20" x="2" y="2" rx="5" stroke="currentColor" strokeWidth="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+                
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="footer-social-button organic-curve transition-all duration-300 shadow-warm hover:shadow-glow border-2 border-primary/30 hover:border-primary hover:bg-primary/10 text-card-foreground hover:text-primary group h-20 w-full" 
+                  asChild
+                >
+                  <a 
+                    href="https://instagram.com/bdppublications" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label="Instagram" 
+                    className="flex flex-col items-center justify-center gap-1.5 h-full"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-7 h-7 group-hover:scale-110 transition-transform">
+                      <rect width="20" height="20" x="2" y="2" rx="5" stroke="currentColor" strokeWidth="2"/>
+                      <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2"/>
+                      <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                    </svg>
+                    <span className="text-xs font-semibold leading-none">Instagram</span>
                   </a>
                 </Button>
-                <Button size="sm" variant="outline" className="organic-curve" asChild>
-                  <a href="https://in.pinterest.com/ishansrivastavaintraq/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-4 h-4"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.853 0 1.264.641 1.264 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.807 1.481 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.744 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.334.135-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="footer-social-button organic-curve transition-all duration-300 shadow-warm hover:shadow-glow border-2 border-primary/30 hover:border-primary hover:bg-primary/10 text-card-foreground hover:text-primary group h-20 w-full" 
+                  asChild
+                >
+                  <a 
+                    href="https://in.pinterest.com/bdppublications/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label="Pinterest" 
+                    className="flex flex-col items-center justify-center gap-1.5 h-full"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-7 h-7 group-hover:scale-110 transition-transform">
+                      <path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.853 0 1.264.641 1.264 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.807 1.481 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.744 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.334.135-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+                    </svg>
+                    <span className="text-xs font-semibold leading-none">Pinterest</span>
                   </a>
                 </Button>
-                <Button size="sm" variant="outline" className="organic-curve" asChild>
-                  <a href="https://ishanq.gumroad.com/" target="_blank" rel="noopener noreferrer" aria-label="Gumroad">
-                    <ShoppingBag className="w-4 h-4" />
+                
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="footer-social-button organic-curve transition-all duration-300 shadow-warm hover:shadow-glow border-2 border-primary/30 hover:border-primary hover:bg-primary/10 text-card-foreground hover:text-primary group h-20 w-full" 
+                  asChild
+                >
+                  <a 
+                    href="https://ishanq.gumroad.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label="Gumroad Store" 
+                    className="flex flex-col items-center justify-center gap-1.5 h-full"
+                  >
+                    <ShoppingBag className="w-7 h-7 group-hover:scale-110 transition-transform" />
+                    <span className="text-xs font-semibold leading-none">Shop</span>
                   </a>
                 </Button>
+              </div>
+              
+              {/* Enhanced Call-to-action */}
+              <div className="mt-8 p-5 bg-gradient-to-br from-primary/8 to-accent/5 rounded-2xl border border-primary/20 pulse-glow relative overflow-hidden">
+                {/* Background decoration */}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-primary/5 rounded-full -translate-y-10 translate-x-10"></div>
+                <div className="absolute bottom-0 left-0 w-16 h-16 bg-accent/5 rounded-full translate-y-8 -translate-x-8"></div>
+                
+                <div className="text-center relative z-10">
+                  <div className="flex items-center justify-center gap-2 mb-3">
+                    <span className="text-lg">📚</span>
+                    <p className="text-sm font-medium text-card-foreground">
+                      Get exclusive content and updates
+                    </p>
+                    <span className="text-lg">✨</span>
+                  </div>
+                  <div className="flex justify-center gap-1 mb-2">
+                    <span className="inline-block w-1.5 h-1.5 bg-primary/70 rounded-full animate-pulse"></span>
+                    <span className="inline-block w-1.5 h-1.5 bg-primary/70 rounded-full animate-pulse delay-200"></span>
+                    <span className="inline-block w-1.5 h-1.5 bg-primary/70 rounded-full animate-pulse delay-400"></span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Follow us on any platform above
+                  </p>
+                </div>
               </div>
             </div>
           </div>
