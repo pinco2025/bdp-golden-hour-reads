@@ -166,7 +166,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative py-20 px-6 overflow-hidden">
+      <section id="about" className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -179,19 +179,19 @@ const Index = () => {
         <div className="absolute inset-0 bg-secondary/50 backdrop-blur-sm" />
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl text-compass-heading text-black mb-8 typewriter">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl text-compass-heading text-black mb-6 sm:mb-8 typewriter">
                 Beyond Digital Paradigms
               </h2>
-              <div className="space-y-8">
-                <p className="text-xl text-maritime text-black fade-in leading-relaxed">
+              <div className="space-y-6 sm:space-y-8">
+                <p className="text-base sm:text-lg lg:text-xl text-maritime text-black fade-in leading-relaxed">
                   We are <strong className="text-primary font-bold">pioneers</strong> at the intersection of holistic wellness, 
                   financial wisdom, and digital awareness. Our mission transcends traditional publishing—we craft 
                   <em className="text-accent font-semibold"> evidence-based protocols</em> and paradigm-shifting 
                   insights that empower individuals to reclaim their health, wealth, and digital autonomy.
                 </p>
-                <p className="text-lg text-maritime text-black fade-in-delayed leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg text-maritime text-black fade-in-delayed leading-relaxed">
                   From <span className="font-semibold text-primary">optimizing sleep naturally</span> to building 
                   <span className="font-semibold text-accent">sustainable wealth</span>, from understanding 
                   <span className="font-medium text-primary">crypto market dynamics</span> to planning 
@@ -199,36 +199,36 @@ const Index = () => {
                   years of research distilled into actionable wisdom.
                 </p>
                 <div className="fade-in-more-delayed">
-                  <p className="text-lg font-semibold text-black italic">
+                  <p className="text-sm sm:text-base lg:text-lg font-semibold text-black italic">
                     "We don't just publish books; we architect blueprints for transformed lives."
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 fade-in-more-delayed">
-                <div className="glassmorphism rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 group">
-                  <h4 className="text-xl text-minimal-bold text-primary mb-3 group-hover:text-accent transition-colors">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8 fade-in-more-delayed">
+                <div className="glassmorphism rounded-2xl p-4 sm:p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 group">
+                  <h4 className="text-lg sm:text-xl text-minimal-bold text-primary mb-2 sm:mb-3 group-hover:text-accent transition-colors">
                     📊 Evidence-Based
                   </h4>
-                  <p className="text-sm text-clean text-muted-foreground leading-relaxed">
+                  <p className="text-xs sm:text-sm text-clean text-muted-foreground leading-relaxed">
                     Every protocol backed by rigorous research, peer-reviewed studies, and real-world testing across diverse populations.
                   </p>
                 </div>
-                <div className="glassmorphism rounded-2xl p-6 border border-accent/20 hover:border-accent/40 transition-all duration-300 group">
-                  <h4 className="text-xl text-minimal-bold text-accent mb-3 group-hover:text-primary transition-colors">
+                <div className="glassmorphism rounded-2xl p-4 sm:p-6 border border-accent/20 hover:border-accent/40 transition-all duration-300 group">
+                  <h4 className="text-lg sm:text-xl text-minimal-bold text-accent mb-2 sm:mb-3 group-hover:text-primary transition-colors">
                     🧭 Paradigm Shifting
                   </h4>
-                  <p className="text-sm text-clean text-muted-foreground leading-relaxed">
+                  <p className="text-xs sm:text-sm text-clean text-muted-foreground leading-relaxed">
                     Challenging conventional wisdom with innovative, holistic approaches that transform how you think about health and wealth.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="relative overflow-hidden">
-              <div className="organic-curve bg-white/30 backdrop-blur-lg p-8 shadow-warm border border-white/40">
+            <div className="relative overflow-hidden mt-8 lg:mt-0 order-first lg:order-last">
+              <div className="organic-curve bg-white/30 backdrop-blur-lg p-4 sm:p-6 lg:p-8 shadow-warm border border-white/40">
                 <img 
                   src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=500&h=600&fit=crop&crop=edges" 
                   alt="Modern workspace with books, technology and warm lighting representing the intersection of digital and traditional knowledge"
-                  className="w-full h-auto rounded-lg shadow-warm"
+                  className="w-full h-auto rounded-lg shadow-warm max-h-72 sm:max-h-80 lg:max-h-none object-cover"
                 />
               </div>
             </div>
@@ -245,7 +245,7 @@ const Index = () => {
       </div>
 
       {/* Featured Books Section */}
-      <section id="featured-books" className="relative py-20 px-6 overflow-hidden">
+      <section id="featured-books" className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -259,20 +259,20 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/20" />
         
         <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="glassmorphism-strong rounded-3xl p-8 max-w-3xl mx-auto">
-              <h2 className="text-4xl md:text-5xl text-compass-heading mb-6 text-foreground">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <div className="glassmorphism-strong rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 max-w-3xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl text-compass-heading mb-4 sm:mb-6 text-foreground">
                 Featured Collection
               </h2>
-              <p className="text-xl text-muted-foreground text-clean max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground text-clean max-w-2xl mx-auto">
                 Handpicked titles that have touched hearts and changed minds. Each book is a doorway to new perspectives.
               </p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {featuredBooks.map((book, index) => (
-              <Card key={index} className="organic-curve overflow-hidden book-hover border border-white/20 shadow-warm bg-white/10 backdrop-blur-lg group cursor-pointer">
+              <Card key={index} className="organic-curve overflow-hidden book-hover border border-white/20 shadow-warm bg-white/10 backdrop-blur-lg group cursor-pointer mx-auto max-w-sm w-full">
                 <a href={book.gumroadUrl} target="_blank" rel="noopener noreferrer" className="block">
                   <div className="aspect-[3/4] overflow-hidden">
                     <img 
@@ -281,49 +281,50 @@ const Index = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-minimal-bold text-lg mb-2 text-card-foreground group-hover:text-primary transition-colors">
+                  <div className="p-4 sm:p-6">
+                    <h3 className="text-minimal-bold text-base sm:text-lg mb-2 text-card-foreground group-hover:text-primary transition-colors line-clamp-2">
                       {book.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-2 text-minimal">by {book.author}</p>
-                    <p className="text-sm text-clean text-muted-foreground mb-4">{book.description}</p>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-lg font-bold text-primary">{book.price}</span>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-2 text-minimal">by {book.author}</p>
+                    <p className="text-xs sm:text-sm text-clean text-muted-foreground mb-3 sm:mb-4 line-clamp-3">{book.description}</p>
+                    <div className="flex items-center justify-between mb-3 sm:mb-4">
+                      <span className="text-base sm:text-lg font-bold text-primary">{book.price}</span>
                       <div className="flex gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                          <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-primary text-primary" />
                         ))}
                       </div>
                     </div>
                   </div>
                 </a>
-                <div className="px-6 pb-6">
-                  <div className="flex gap-2">
+                <div className="px-4 sm:px-6 pb-4 sm:pb-6">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {book.platforms.includes('gumroad') && (
-                      <Button size="sm" className="flex-1 organic-curve" asChild>
+                      <Button size="sm" className="flex-1 min-w-0 organic-curve text-xs sm:text-sm px-2 sm:px-3" asChild>
                         <a href={book.gumroadUrl} target="_blank" rel="noopener noreferrer" aria-label="Buy on Gumroad">
-                          <ShoppingBag className="w-4 h-4 mr-1" />
-                          Buy Now
+                          <ShoppingBag className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                          <span className="hidden xs:inline">Buy Now</span>
+                          <span className="xs:hidden">Buy</span>
                         </a>
                       </Button>
                     )}
                     {book.platforms.includes('facebook') && (
-                      <Button size="sm" variant="outline" className="organic-curve border-primary/50" asChild>
+                      <Button size="sm" variant="outline" className="organic-curve border-primary/50 p-2" asChild>
                         <a href="https://www.facebook.com/profile.php?id=61570296240601" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                          <Facebook className="w-4 h-4" />
+                          <Facebook className="w-3 h-3 sm:w-4 sm:h-4" />
                         </a>
                       </Button>
                     )}
                     {/* Always show Instagram button */}
-                    <Button size="sm" variant="outline" className="organic-curve border-primary/50" asChild>
+                    <Button size="sm" variant="outline" className="organic-curve border-primary/50 p-2" asChild>
                       <a href="https://instagram.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-4 h-4"><rect width="20" height="20" x="2" y="2" rx="5" stroke="currentColor" strokeWidth="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-3 h-3 sm:w-4 sm:h-4"><rect width="20" height="20" x="2" y="2" rx="5" stroke="currentColor" strokeWidth="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
                       </a>
                     </Button>
                     {book.platforms.includes('pinterest') && (
-                      <Button size="sm" variant="outline" className="organic-curve border-primary/50" asChild>
+                      <Button size="sm" variant="outline" className="organic-curve border-primary/50 p-2" asChild>
                         <a href="https://in.pinterest.com/bdppublications/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-4 h-4"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.853 0 1.264.641 1.264 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.807 1.481 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.744 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.334.135-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-3 h-3 sm:w-4 sm:h-4"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.853 0 1.264.641 1.264 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.807 1.481 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.744 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.334.135-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
                         </a>
                       </Button>
                     )}
@@ -333,9 +334,9 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <div className="glassmorphism rounded-2xl p-6 inline-block">
-              <Button size="lg" variant="default" className="organic-curve bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 glow shadow-warm" asChild>
+          <div className="text-center mt-8 sm:mt-12">
+            <div className="glassmorphism rounded-2xl p-4 sm:p-6 inline-block">
+              <Button size="lg" variant="default" className="organic-curve bg-primary hover:bg-primary/90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 glow shadow-warm text-sm sm:text-base" asChild>
                 <a href="https://ishanq.gumroad.com/" target="_blank" rel="noopener noreferrer">
                   View Full Catalog
                 </a>
@@ -346,7 +347,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section id="community" className="relative py-20 px-6 overflow-hidden">
+      <section id="community" className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -360,26 +361,26 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-black/20" />
         
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="bg-black/20 backdrop-blur-xl p-12 organic-curve text-white border border-white/20 shadow-glow">
-            <h2 className="text-4xl md:text-5xl text-compass-heading mb-6">
+          <div className="bg-black/20 backdrop-blur-xl p-6 sm:p-8 lg:p-12 organic-curve text-white border border-white/20 shadow-glow">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-compass-heading mb-4 sm:mb-6">
               Join Our Reading Community
             </h2>
-            <p className="text-xl text-clean mb-8 opacity-90">
+            <p className="text-base sm:text-lg lg:text-xl text-clean mb-6 sm:mb-8 opacity-90">
               Be the first to discover new releases, exclusive content, and special offers. 
               Your next favorite book is just a click away.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="organic-curve text-lg px-8 py-6 bg-white/90 text-primary hover:bg-white" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button size="lg" variant="secondary" className="organic-curve text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 bg-white/90 text-primary hover:bg-white" asChild>
                 <a href="https://www.facebook.com/profile.php?id=61570296240601" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   Follow on Facebook
                 </a>
               </Button>
-              <Button size="lg" variant="secondary" className="organic-curve text-lg px-8 py-6 bg-white/90 text-primary hover:bg-white" asChild>
+              <Button size="lg" variant="secondary" className="organic-curve text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 bg-white/90 text-primary hover:bg-white" asChild>
                 <a href="https://instagram.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   Follow on Instagram
                 </a>
               </Button>
-              <Button size="lg" variant="secondary" className="organic-curve text-lg px-8 py-6 bg-white/90 text-primary hover:bg-white" asChild>
+              <Button size="lg" variant="secondary" className="organic-curve text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 bg-white/90 text-primary hover:bg-white" asChild>
                 <a href="https://in.pinterest.com/bdppublications/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
                   Visit Our Pinterest
                 </a>
