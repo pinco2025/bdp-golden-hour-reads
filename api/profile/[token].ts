@@ -1,5 +1,5 @@
-import { subscriberService } from '../../_supabase.js'
-import { emailService } from '../../_email.js'
+import { subscriberService } from '../_supabase.js'
+import { emailService } from '../_email.js'
 
 export default async function handler(req: any, res: any) {
   const { token } = req.query as { token?: string }
