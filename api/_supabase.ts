@@ -19,9 +19,11 @@ export const supabaseAdmin = createClient(supabaseUrl, supabaseServiceRoleKey, {
 
 export const subscriberService = {
   async create(data: any) {
+    const profileToken = data?.profile_token || (globalThis.crypto?.randomUUID ? globalThis.crypto.randomUUID() : Math.random().toString(36).slice(2))
+    const insertData = { ...data, profile_token: profileToken }
     return await supabaseAdmin
       .from('subscribers')
-      .insert(data)
+      .insert(insertData)
       .select()
       .single()
   },
