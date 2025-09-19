@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navbar from "@/components/ui/navbar";
+import NewsletterSubscription from "@/components/NewsletterSubscription";
 import { BookOpen, Heart, Star, ExternalLink, Facebook, ShoppingBag } from "lucide-react";
 
 const Index = () => {
@@ -346,7 +347,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Newsletter Subscription Section */}
       <section id="community" className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 overflow-hidden">
         {/* Background Image */}
         <div 
@@ -360,31 +361,39 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/35 via-accent/25 to-primary/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-black/20" />
         
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="bg-black/20 backdrop-blur-xl p-6 sm:p-8 lg:p-12 organic-curve text-white border border-white/20 shadow-glow">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-compass-heading mb-4 sm:mb-6">
-              Join Our Reading Community
-            </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-clean mb-6 sm:mb-8 opacity-90">
-              Be the first to discover new releases, exclusive content, and special offers. 
-              Your next favorite book is just a click away.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="organic-curve text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 bg-white/90 text-primary hover:bg-white" asChild>
-                <a href="https://www.facebook.com/profile.php?id=61570296240601" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                  Follow on Facebook
-                </a>
-              </Button>
-              <Button size="lg" variant="secondary" className="organic-curve text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 bg-white/90 text-primary hover:bg-white" asChild>
-                <a href="https://instagram.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                  Follow on Instagram
-                </a>
-              </Button>
-              <Button size="lg" variant="secondary" className="organic-curve text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 bg-white/90 text-primary hover:bg-white" asChild>
-                <a href="https://in.pinterest.com/bdppublications/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                  Visit Our Pinterest
-                </a>
-              </Button>
+        <div className="relative z-10 max-w-4xl mx-auto">
+          {/* Newsletter Subscription Component */}
+          <div className="mb-8 sm:mb-12">
+            <NewsletterSubscription 
+              className="bg-white/95 backdrop-blur-xl border-white/40 shadow-glow"
+              title="Join Our Reading Community"
+              description="Be the first to discover new releases, get personalized recommendations, and receive exclusive content. We'll help you find your next great read!"
+            />
+          </div>
+          
+          {/* Social Media Links */}
+          <div className="text-center">
+            <div className="bg-black/20 backdrop-blur-xl p-4 sm:p-6 organic-curve text-white border border-white/20 shadow-glow">
+              <p className="text-sm sm:text-base mb-4 opacity-90">
+                Connect with us on social media for daily book updates and community discussions
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                <Button size="sm" variant="secondary" className="organic-curve text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 bg-white/90 text-primary hover:bg-white" asChild>
+                  <a href="https://www.facebook.com/profile.php?id=61570296240601" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    Follow on Facebook
+                  </a>
+                </Button>
+                <Button size="sm" variant="secondary" className="organic-curve text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 bg-white/90 text-primary hover:bg-white" asChild>
+                  <a href="https://instagram.com/bdppublications" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    Follow on Instagram
+                  </a>
+                </Button>
+                <Button size="sm" variant="secondary" className="organic-curve text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 bg-white/90 text-primary hover:bg-white" asChild>
+                  <a href="https://in.pinterest.com/bdppublications/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                    Visit Our Pinterest
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
