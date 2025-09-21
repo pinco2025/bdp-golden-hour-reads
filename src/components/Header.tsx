@@ -25,7 +25,7 @@ const Header: React.FC = () => (
           alt="BDP Publications Logo"
           className="w-10 h-10 rounded-full object-cover border border-white shadow"
         />
-        <span className="font-serif text-xl font-bold tracking-tight text-primary drop-shadow-sm">
+        <span className="font-serif text-xl font-bold tracking-tight drop-shadow-sm" style={{ color: '#068f4d' }}>
           BDP Publications
         </span>
       </div>
