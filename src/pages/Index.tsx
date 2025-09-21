@@ -38,6 +38,55 @@ const Index = () => {
       description: "Finding peace in everyday life",
       price: "$13.99",
       platforms: ["gumroad", "pinterest"]
+    },
+    // Additional sample books for carousel testing
+    {
+      title: "Waves of Wisdom",
+      author: "Priya Nair",
+      cover: "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=300&h=400&fit=crop&crop=edges",
+      description: "Reflections from the sea",
+      price: "$14.99",
+      platforms: ["gumroad"]
+    },
+    {
+      title: "Forest Whispers",
+      author: "Liam O'Connor",
+      cover: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=300&h=400&fit=crop&crop=edges",
+      description: "Nature's secrets in poetry",
+      price: "$10.99",
+      platforms: ["facebook"]
+    },
+    {
+      title: "City Lights",
+      author: "Ava Kim",
+      cover: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=300&h=400&fit=crop&crop=edges",
+      description: "Urban tales and dreams",
+      price: "$13.49",
+      platforms: ["pinterest"]
+    },
+    {
+      title: "Desert Dreams",
+      author: "Omar Al-Farsi",
+      cover: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=300&h=400&fit=crop&crop=edges",
+      description: "Stories from the sands",
+      price: "$12.49",
+      platforms: ["gumroad", "facebook"]
+    },
+    {
+      title: "Mountain Echoes",
+      author: "Sofia Petrova",
+      cover: "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?w=300&h=400&fit=crop&crop=edges",
+      description: "Adventures above the clouds",
+      price: "$16.99",
+      platforms: ["gumroad", "pinterest"]
+    },
+    {
+      title: "Starlit Stories",
+      author: "Noah Lee",
+      cover: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=300&h=400&fit=crop&crop=edges",
+      description: "Tales under the night sky",
+      price: "$11.49",
+      platforms: ["facebook", "pinterest"]
     }
   ];
 
