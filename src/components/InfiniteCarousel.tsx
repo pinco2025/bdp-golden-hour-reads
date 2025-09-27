@@ -79,19 +79,15 @@ export default function InfiniteCarousel({ books, focusedIdx, setFocusedIdx }: P
       </button>
   <div ref={sliderRef} className="keen-slider pb-8 min-h-[380px]">
         {books.map((book, idx) => (
-          <div key={book.title + idx} className="keen-slider__slide flex-shrink-0 w-[220px]" onClick={() => setFocusedIdx(idx)}>
+          <div key={book.title + idx} className="keen-slider__slide flex-shrink-0 flex flex-col items-center justify-center w-[280px]" onClick={() => setFocusedIdx(idx)}>
             <a
               href={book.link || "https://example.com/buy-book"}
               target="_blank"
               rel="noopener noreferrer"
               className="block h-full"
             >
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl border-2 border-gray-300 dark:border-gray-700 overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 h-[340px] flex flex-col cursor-pointer hover:ring-2 hover:ring-primary">
-                <div className="w-full h-[260px] bg-cover bg-center" style={{backgroundImage: `url('${book.img}')`}}></div>
-                <div className="p-4 flex-1 flex flex-col justify-end">
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white truncate">{book.title}</h3>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 line-clamp-2">{book.desc}</p>
-                </div>
+              <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-primary/30 flex items-center justify-center p-2 h-[400px] w-[280px] overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 cursor-pointer">
+                <img src={book.img} alt={book.title} className="w-[280px] h-[400px] object-cover rounded-2xl" />
               </div>
             </a>
           </div>

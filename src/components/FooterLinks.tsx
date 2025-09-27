@@ -3,7 +3,7 @@ import { ShoppingBag, Instagram, ExternalLink } from "lucide-react";
 
 const links = [
   {
-    href: "https://gumroad.com/bdppublications",
+    href: "https://gumroad.com/bdpbooksnguides",
     alt: "Gumroad",
     icon: <ShoppingBag className="h-7 w-7 text-primary" />
   },

@@ -5,10 +5,10 @@ import { Helmet } from "react-helmet";
 
 const books = [
   {
-    title: "Whispers of the Ancient Forest",
-    desc: "A tale of magic and mystery.",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCxm94wi7LixggViDOiluZmEjT9HCowuC6yX4aVc2yHB7ojdcXA-YXTK7AghBpQ-mW15bTepKh3_HNL-VyMc4b7AXYgM_D60hEXJPs4coC3ylcW5ZlVt5vBFsJxdjhzhjsyCDEdZjIa4bGmczVASNYT8tURII5RYNIYx_zpXX6-CA320kkvgloBb6vrZWZoaL_osNlD1MJhPmu5N4i-7IigIEyKp3gSZkyNIVTvPFqJybn3W1cvnThdewbmRO_QMtaaBWyUIP59lL6Z",
-    link: "https://example.com/buy-book"
+    title: "The Burnout Reset: A practical 30-day plan",
+    desc: "A practical 30-day plan to reclaim your energy by implementing science-backed techniques for setting boundaries, practicing digital minimalism, and ending the stress cycle.",
+    img: "https://public-files.gumroad.com/4lxnhpunk3mb9w8kw0yg2npxqrkr",
+    link: "https://bdpbooksnguides.gumroad.com/l/burnout-reset?layout=profile"
   },
   {
     title: "The Trailblazer's Compass",
@@ -40,7 +40,7 @@ const Index = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <body className="dark" />
       </Helmet>
-  <div className="min-h-screen flex flex-col bg-black font-display text-gray-200">
+  <div className="min-h-screen flex flex-col bg-black font-serif text-gray-200">
   {/* Header */}
   <header className="flex items-center justify-between border-b border-gray-800 px-10 py-4 shadow-sm bg-black">
           <div className="flex items-center gap-3">
@@ -76,8 +76,8 @@ const Index = () => {
                   </div>
                   {/* Book Info Right - more flexible for extra info */}
                   <div className="flex flex-col justify-center px-12 py-10 flex-1 gap-6">
-                    <h3 className="text-2xl md:text-3xl font-extrabold mb-2 text-white drop-shadow-lg w-full max-w-2xl text-center" style={{fontFamily: 'Montserrat, sans-serif'}}>{focusedBook.title}</h3>
-                    <p className="text-xl md:text-2xl text-gray-400 mb-4 font-medium leading-relaxed" style={{fontFamily: 'Inter, sans-serif'}}>{focusedBook.desc}</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white drop-shadow-lg w-full max-w-2xl text-center font-serif" style={{fontFamily: 'Georgia, Times, Times New Roman, serif'}}>{focusedBook.title}</h3>
+                    <p className="text-xl md:text-2xl text-gray-400 mb-4 font-normal leading-relaxed font-serif" style={{fontFamily: 'Georgia, Times, Times New Roman, serif'}}>{focusedBook.desc}</p>
                     {/* Extra info placeholder for future integration */}
                     <div className="flex flex-col gap-2">
                       {/* Example: Author, Genre, Year, etc. */}
