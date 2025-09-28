@@ -59,9 +59,14 @@ const Index = () => {
             <div className="max-w-4xl mx-auto text-center text-white">
               <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mb-4">Reclaim your energy in 30 days</h1>
               <p className="text-lg md:text-xl font-light mb-8">Download our free guide and start today.</p>
-              <button className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-primary/90 transition-all transform hover:scale-105">
-                Get Your Energy
-              </button>
+                <a
+                  href="https://bdpbooksnguides.gumroad.com/l/burnout-reset-free-guide"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-primary text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-primary/90 transition-all transform hover:scale-105"
+                >
+                  Get Your Energy
+                </a>
             </div>
           </section>
           {/* Carousel Section */}
