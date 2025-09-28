@@ -63,7 +63,7 @@ const Index = () => {
                   href="https://bdpbooksnguides.gumroad.com/l/burnout-reset-free-guide"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block bg-primary text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-primary/90 transition-all transform hover:scale-105"
+                  className="block bg-primary text-white px-6 py-4 rounded-lg text-lg font-bold hover:bg-primary/90 transition-all transform hover:scale-105 max-w-[220px] mx-auto text-center"
                 >
                   Get Your Energy
                 </a>
