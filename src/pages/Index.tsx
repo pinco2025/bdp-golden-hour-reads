@@ -8,24 +8,24 @@ const books = [
     title: "The Burnout Reset: A practical 30-day plan",
     desc: "A practical 30-day plan to reclaim your energy by implementing science-backed techniques for setting boundaries, practicing digital minimalism, and ending the stress cycle.",
     img: "https://public-files.gumroad.com/4lxnhpunk3mb9w8kw0yg2npxqrkr",
-    link: "https://bdpbooksnguides.gumroad.com/l/burnout-reset?layout=profile"
+    link: "https://rzp.io/rzp/burnout-reset"
   },
   {
-    title: "The Trailblazer's Compass",
-    desc: "An epic journey of discovery.",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDk7fV9k1V113ozWW4e8Af11a3_ah087Z-laUOgoZv589XW4N8DoK-JBwUpn-90bKCa4tMaVoZROcZfQVYRinvIw-K7AE9HzH08GR2Q0M1FmwmsSVvoUAi2XSGBPhGdQKGjJATcDYtze-GaB62bC2kW5gP_P2CBzbA4WWGEH9SJToMeQ5hV07xw2V3bzX35YWpi7SHPdlduAWdYPfKjVncL228JMixDSrJjXjEvYzU1H0XdBA-A-unqBRGxCEYLUcpwyJwbQc0j1T-N",
+    title: "Rent-a-Boyfriend (Part 1)",
+    desc: "She needed a plus-one. He needed a paycheck. What they didn’t expect was falling for each other, while barely affording rent.",
+    img: "https://public-files.gumroad.com/3zd6zyfgwh9bpwf2rff260zdj6nu",
     link: "https://example.com/buy-book"
   },
   {
-    title: "Shadows of the Silent City",
-    desc: "A thrilling urban enigma.",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDInVyTMJKDI7AeAcXc__3fB-Tht2oePr9823fj0Bb0ACGgFjdOXavvloakHfitCwFlqv4Nk4KPvQwPBLs3ImY_djt4sps1_VxVSJdPaYvwVht-tIAI5mBqUA22U9sdpY75u0tADgOCoPMwsbzwbuG6gXA6B9GTe7NNsnF2dPXunS67RavOseQEoHENNs8P_JV1sEcq-QkJPEzTdzLrCTfTjbSkzOJl1rmLB04muAqAW7-_TiMxlvRn3OLvFuoPXFjDhNu2-2fQC1qI",
+    title: "Micro-Habits for a Mega-Life",
+    desc: "Big changes don’t require massive effort. This guide shows you how to stack tiny, actionable habits onto your existing routine and watch your life transform.",
+    img: "https://public-files.gumroad.com/wfbg6epu5m29ty4hgwgw72ya8316",
     link: "https://example.com/buy-book"
   },
   {
-    title: "Eternal Echoes of the Heart",
-    desc: "A timeless love story.",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD1_jTtmF3hpmOPfphJsdvw8pNKGsFBy-SYZLeh-PLHYXj6UM-_bMoQeGn88oz-I8UZb2J1td22qJOv7UiJlLAx983VYKAvcaH7CG13Ci40luYqo7jCNdkPMZFtcEFXet-6GLRACfE0Tgu6AOL1PMC1g9KM8-EYWTnU5JNuBkmwQTGu9pwzi6HwnS8fOTgjOfViXo7HCI8ibR6cRimQ5CKcNbtKQOBZPUAZ0_YKk4KXeKf6gYFeeSrNWheRq0YWxy9_q8xTotkFgkxH",
+    title: "The Last Spell of Summer",
+    desc: "She’s a weary witch with nothing left to give. He’s a gruff sheriff keeping his town in check. Neither expected that magic, or love, would come knocking again.",
+    img: "https://public-files.gumroad.com/pclfn4jk5meync5pvlxqmkg8txbb",
     link: "https://example.com/buy-book"
   }
 ];
